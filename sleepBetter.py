@@ -5,7 +5,6 @@ import tkinter.ttk as ttk
 import tkinter.font as tkFont
 import tkinter as tk
 import pygame
-from tkinter import *
 from tkinter import messagebox
 import webbrowser
 
