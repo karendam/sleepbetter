@@ -47,6 +47,12 @@ def newtimer():
     newinput.pack(padx=5)
     newsave = Button(newtop, text = "Save", command = anothersave)
     newsave.pack()
+   
+def stopit():
+    pygame.mixer.quit()
+
+stopping = Button(root,text ="Stop Sound", command = stopit)
+stopping.grid(row = 6, column =5)
 
 atimer = Button(root, text="Timer", command = newtimer)
 atimer.grid(row = 1, column = 5)
