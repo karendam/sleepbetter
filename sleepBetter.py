@@ -25,12 +25,13 @@ def save():
     min.write(input.get())
     min.close()
     top.destroy()
-    
+
 def anothersave():
     min = open("test.txt", "w")
     min.write(newinput.get())
     min.close()
     newtop.destroy()
+
 
 def timer():
     milli= open("test.txt","r")
@@ -72,7 +73,7 @@ def rainStart():
     sounda= pygame.mixer.Sound("rain-03.wav")
     milliseconds=timer()
     sounda.play(-1,milliseconds)
-    print("timer done")
+    print("Timer Initiated")
 
 
 def paperStart():
@@ -82,7 +83,7 @@ def paperStart():
     soundb= pygame.mixer.Sound("paper-rustle-5.wav")
     milliseconds=timer()
     soundb.play(-1,milliseconds)
-    print("timer done")
+    print("Timer Initiated")
 
 def planeStart():
     milliseconds = 0
@@ -91,7 +92,7 @@ def planeStart():
     soundc= pygame.mixer.Sound("airplane-interior-1.wav")
     milliseconds=timer()
     soundc.play(-1,milliseconds)
-    print("timer done")
+    print("Timer Initiated")
 
 def fanStart():
     milliseconds = 0
