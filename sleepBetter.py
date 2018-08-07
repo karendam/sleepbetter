@@ -17,14 +17,20 @@ root.title("Sleep Better")
 top = Toplevel()
 top.attributes('-topmost', 'true')
 top.title("Timer")
-
+newtop =Toplevel()
+newinput = Entry(newtop)
 
 def save():
     min = open("test.txt", "w")
     min.write(input.get())
     min.close()
     top.destroy()
-
+    
+def anothersave():
+    min = open("test.txt", "w")
+    min.write(newinput.get())
+    min.close()
+    newtop.destroy()
 
 def timer():
     milli= open("test.txt","r")
@@ -32,6 +38,17 @@ def timer():
     milliseconds=int(long)*60*1000
     return milliseconds
 
+def newtimer():
+    newtop.attributes("-topmost", "true")
+    newtop.title('Timer')
+    newlabel=Label(newtop, text = "How many minutes do you want?")
+    newlabel.pack()
+    newinput.pack(padx=5)
+    newsave = Button(newtop, text = "Save", command = anothersave)
+    newsave.pack()
+
+atimer = Button(root, text="Timer", command = newtimer)
+atimer.grid(row = 1, column = 5)
 
 label= Label(top, text= "How many minutes of white noise do you want?")
 label.pack()
@@ -43,6 +60,7 @@ label.configure(background="#A8BBD9")
 b = Button(top, text="Save", command=save)
 b.pack(pady=5)
 b.configure(background="#A8BBD9")
+
 
 
 def rainStart():
